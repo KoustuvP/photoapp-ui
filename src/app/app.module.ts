@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { environment } from '../environments/environment'
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MockInterceptor } from './interceptor/mock.interceptor';
 
 @NgModule({
@@ -19,7 +19,8 @@ import { MockInterceptor } from './interceptor/mock.interceptor';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [
     {
