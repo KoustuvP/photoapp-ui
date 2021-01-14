@@ -16,7 +16,6 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
     AngularMaterialModule
   ],
   exports:[
-    DialogueComponent,
     DialogueDirective
   ]
 })
