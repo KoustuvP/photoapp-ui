@@ -1,0 +1,7 @@
+[
+    {"id":"someid1","name":"some name 1", "description":"some description 1", "tags":["tag1","tag2"]},
+    {"id":"someid2","name":"some name 2", "description":"some description 2", "tags":["tag1","tag2"]},
+    {"id":"someid3","name":"some name 3", "description":"some description 3", "tags":["tag1","tag2"]},
+    {"id":"someid4","name":"some name 4", "description":"some description 4", "tags":["tag1","tag2"]},
+    {"id":"someid5","name":"some name 5", "description":"some description 5", "tags":["tag1","tag2"]}
+]

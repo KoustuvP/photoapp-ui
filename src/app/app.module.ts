@@ -9,10 +9,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { environment } from '../environments/environment'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MockInterceptor } from './interceptor/mock.interceptor';
+import { SharedModule } from './common/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +21,8 @@ import { MockInterceptor } from './interceptor/mock.interceptor';
     BrowserAnimationsModule,
     AngularMaterialModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [
     {

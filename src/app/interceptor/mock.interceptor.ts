@@ -7,6 +7,7 @@ import {
   HttpResponse
 } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { mockUrls } from '../mock/mock-url-config';
 
 @Injectable()
 export class MockInterceptor implements HttpInterceptor {
@@ -15,13 +16,19 @@ export class MockInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const {url,method,body,headers} = request;
-    if(url=='mockserver/api')
+    let responseData=mockUrls.find(mockurl=>mockurl.url==url)?.json;
+    
+    if(url=='mockserver/api/login')
     return  of(new HttpResponse({
       status:200,
       body: {
         role:'admin'
       }
     }))
-    return next.handle(request);
+    return of( new HttpResponse({
+      status:200,
+      body:responseData
+    }));
+    //return next.handle(request);
   }
 }
