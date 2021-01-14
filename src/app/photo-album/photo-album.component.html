@@ -1,1 +1,10 @@
-<p>photo-album works!</p>
+
+<div class="example-button-container" >
+    <button  appDialogue mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+      <mat-icon>bookmark</mat-icon>
+    </button>
+  </div>
+<div class="album-card-wrapper">
+    <app-album-card class="album-card" [album]=album *ngFor="let album of albums" routerLink="someid1"></app-album-card>
+</div>
+

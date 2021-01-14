@@ -20,7 +20,7 @@ export class AuthService {
 
   authenticate (data) {
 
-     this.sb=this.http.post(`${this.urlEndpoint}`,data).subscribe(data=>{
+     this.sb=this.http.post(`${this.urlEndpoint}/login`,data).subscribe(data=>{
       data?this.isLoggedin.next(true):this.isLoggedin.next(false);
       
     });

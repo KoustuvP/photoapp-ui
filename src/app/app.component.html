@@ -1,13 +1,15 @@
-<mat-toolbar color="primary" class="app-header" *ngIf="false">
-  <div>PhotoApp</div>
-  <span class="nav-tool-items">
-    <a mat-button routerLink="" routerLinkActive="active">Link1</a>
-    <a mat-button mat-raised-button routerLink="" routerLinkActive="active">Link2</a>
-  </span>
-</mat-toolbar>
-
-<router-outlet></router-outlet>
-
-<mat-toolbar color="primary" class="app-footer">
-  <div><a href="" target="_blank" class="copyright">copyright</a></div>
-</mat-toolbar>
+<div fxLayout="column" fxFlexFill>
+  <mat-toolbar color="primary" class="app-header" *ngIf="authService.authentication|async">
+    <div>PhotoApp</div>
+    <span class="nav-tool-items">
+      <a mat-button routerLink="" routerLinkActive="active">Link1</a>
+      <a mat-button mat-raised-button routerLink="" routerLinkActive="active">Link2</a>
+    </span>
+  </mat-toolbar>
+  <div fxFlex>
+      <router-outlet></router-outlet>
+  </div>
+  <mat-toolbar color="accent" class="app-footer">
+    <div><a href="" target="_blank" class="copyright">copyright</a></div>
+  </mat-toolbar>
+</div>
